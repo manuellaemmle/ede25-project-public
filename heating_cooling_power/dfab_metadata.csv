@@ -1,0 +1,44 @@
+NumericID,DescriptiveID,Description,Unit,Type
+Index,Index,Index,Index,Index
+3200000,temp_amb, Ambient temperature [°C],roof,Temperature Ambient
+3200008,irrad, Global solar irradiation [W/m^2],roof,Solar Radiation
+421110008,y1_371, Valve 1 position room 371 [0/1],dfab,Valve
+421110009,y2_371, Valve 2 position room 371 [0/1],dfab,Valve
+421110010,y3_371, Valve 3 position room 371 [0/1],dfab,Valve
+421110011,y4_371, Valve 4 position room 371 [0/1],dfab,Valve
+421110012,y5_371, Valve 5 position room 371 [0/1],dfab,Valve
+421110013,y6_371, Valve 6 position room 371 [0/1],dfab,Valve
+421110014,y7_371, Valve 7 position room 371 [0/1],dfab,Valve
+421110023,y1_472, Valve 1 position room 472 [0/1],dfab,Valve
+421110024,y2_472, Valve 2 position room 472 [0/1],dfab,Valve
+421110029,y3_472, Valve 3 position room 472 [0/1],dfab,Valve
+421110025,y1_474, Valve 1 position room 474 [0/1],dfab,Valve
+421110026,y1_476, Valve 1 position room 476 [0/1],dfab,Valve
+421110027,y2_476, Valve 2 position room 476 [0/1],dfab,Valve
+421110028,y3_476, Valve 3 position room 476 [0/1],dfab,Valve
+421110038,y1_571, Valve 1 position room 571 [0/1],dfab,Valve
+421110043,y2_571, Valve 2 position room 571 [0/1],dfab,Valve
+421110044,y3_571, Valve 3 position room 571 [0/1],dfab,Valve
+421110042,y1_573, Valve 1 position room 573 [0/1],dfab,Valve
+421110039,y1_574, Valve 1 position room 574 [0/1],dfab,Valve
+421110040,y2_574, Valve 2 position room 574 [0/1],dfab,Valve
+421110041,y3_574, Valve 3 position room 574 [0/1]  ,dfab,Valve
+421110048,temp_371, Temperature room 371 [°C],dfab,Temperature Indoor
+421110054,temp_472, Temperature room 472 [°C],dfab,Temperature Indoor
+421110060,temp_474, Temperature room 474 [°C],dfab,Temperature Indoor
+421110066,temp_476, Temperature room 476 [°C],dfab,Temperature Indoor
+421110072,temp_571, Temperature room 571 [°C],dfab,Temperature Indoor
+421110078,temp_573, Temperature room 573 [°C],dfab,Temperature Indoor
+421110084,temp_574, Temperature room 574 [°C],dfab,Temperature Indoor
+421110050,setp_371, Temperature setpoint room 272 [°C],dfab,Setpoint
+421110056,setp_472, Temperature setpoint room 472 [°C],dfab,Setpoint
+421110062,setp_474, Temperature setpoint room 474 [°C],dfab,Setpoint
+421110068,setp_476, Temperature setpoint room 476 [°C],dfab,Setpoint
+421110074,setp_571, Temperature setpoint room 571 [°C],dfab,Setpoint
+421110080,setp_573, Temperature setpoint room 573 [°C],dfab,Setpoint
+421110086,setp_574, Temperature setpoint room 574 [°C],dfab,Setpoint
+421100172,heating_cooling_power, Heating and cooling power unit [kW],dfab,Heating Cooling
+42190064,kitchen_active_power,Kitchen electric active power [kW],dfab,Electricity Kitchen
+42190139,total_active_power,Total electric active power [kW],dfab,Electricity Total
+421100023,shower_471,Water consumption shower room 471 [l/min],dfab,Water
+421100053,shower_571,Water consumption shower room 571 [l/min],dfab,Water

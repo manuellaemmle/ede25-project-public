@@ -1,0 +1,412 @@
+{
+	"general_information": {
+		"purpose": "This file contains metadata for the measurement data files 'FHW_ArcS__meas__2017.csv' and 'FHW_ArcS__full__2017.csv' in the same zenodo repository. Firstly, the file provides information about the solar thermal plant, collector array, collector type and data channels. Secondly, the file is used for data processing and producing plots with the Python scripts in the same zenodo repository.",
+		"data_set_description": "Arcon South collector array of Fernheizwerk Graz plant: one full year (2017) of measured and calculated data including uncertainty information.",
+		"data_owner": "solar.nahwaerme.at Energiecontracting GmbH",
+		"physical_quantity_info": "All physical quantities in this file come with a description, a numeric value ('magnitude') and a string representing the physical unit of that value ('unit').",
+		"unit_strings_info": "The section 'data_channels' lists the physical units of all data channels used in the measurement data files 'FHW_ArcS__meas__2017.csv' and 'FHW_ArcS__full__2017.csv'. These unit strings (e.g. 'W m**-2') are parsable by the Python pint package https://pypi.org/project/Pint/"
+	},
+
+	"plant_information": {
+		"plant_name": "Fernheizwerk Graz",
+		"application": "Feed-in to the district heating network of the City of Graz",
+		"plant_designer": "SOLID Solar Energy Systems GmbH",
+		"plant_operator": "solar.nahwaerme.at Energiecontracting GmbH",
+		"location_name": "Graz, Austria",
+		"latitude": {
+			"description": "Geographical latitude. Positive is north of the equator.",
+			"magnitude": 47.047294,
+			"unit": "deg"
+		},
+		"longitude": {
+			"description": "Geographical longitude. Positive is east of the prime meridian.",
+			"magnitude": 15.436366,
+			"unit": "deg"
+		},
+		"altitude": {
+			"description": "Location altitude. Used to improve solar position calculation.",
+			"magnitude": 344,
+			"unit": "m"
+		}
+	},
+
+	"collector_array": {
+		"collector_array_name": "Arcon South",
+		"year_array_commissioned": 2014,
+		"mounting_type": "ground-mounted on grass field",
+		"area_gross": {
+			"description": "Total gross collector area of the collector array.",
+			"magnitude": 515.66,
+			"unit": "m**2"
+		},
+		"nominal_power": {
+			"description": "Nominal thermal power output of collector array.",
+			"magnitude": 360.96,
+			"unit": "kW"
+		},
+		"azimuth": {
+			"description": "Azimuth angle of the array surface. An array has exactly 1 scalar `azim`. North=0, East=90, South=180, West=270.",
+			"magnitude": 180,
+			"unit": "deg"
+		},
+		"tilt": {
+			"description": "Tilt angle of the array, defined as angle from the horizontal. Examples: horizontal surface (facing up / towards zenith): tilt=0, vertical surface (facing horizon): tilt=90.",
+			"magnitude": 30,
+			"unit": "deg"
+		},
+		"row_spacing": {
+			"description": "Spacing between the collector rows in the array. Measured on the ground (not on the horizontal projection).",
+			"magnitude": 3.1,
+			"unit": "m"
+		},
+		"mounting_level": {
+			"description": "Distance of the lowest part of a collector from the ground (back edge).",
+			"magnitude": 0.435,
+			"unit": "m"
+		},
+		"ground_tilt": {
+			"description": "Tilt angle of the ground, in the direction of the azimuth of the collector field; positive values increase the absolute tilt of the collectors.",
+			"magnitude": 0,
+			"unit": "deg"
+		},
+		"number_collector_rows": {
+			"description": "Number of collector rows in the collector array.",
+			"magnitude": 4,
+			"unit": "dimensionless"
+		},
+		"fluid_volume_total": {
+			"description": "Total fluid content of the array (including all pipes and collectors).",
+			"magnitude": 0.4721,
+			"unit": "m**3"
+		},
+		"fluid": {
+			"description": "Heat transfer fluid used in collector array. Fixed concentration of propylene glycol (43.5 %). Temperature dependent fluid properties (density, heat capacity) measured in laboratory (ILK Dresden)",
+			"uncertainty_info": "Uncertainty of fluid properties provided by laboratory (ILK Dresden). Multiplication of measured values with ‘max_error’ parameter (for density, heat capacity) yields maximum errors. Maximum errors can be expressed as standard deviation of a normal distribution by dividing by sqrt(3) according to ‘Guide to the Expression of Uncertainty in Measurement‘ (GUM).",
+			"fluid_density": {
+				"temperature": {
+					"magnitude": [20.37, 39.74, 60.1, 80.07, 100.02, 120.06],
+					"unit": "degC"
+				},
+				"density": {
+					"magnitude": [1040.33, 1030.01, 1017.35, 1003.47, 988.11, 971.41],
+					"unit": "kg m**-3"
+				}, 
+				"max_error": 0.005
+			},
+			"fluid_heat_capacity": {
+				"temperature": {
+					"magnitude": [8.05, 13.05, 18.04, 23.04, 28.03, 33.03, 38.03, 43.02, 48.02, 53.01, 58.01, 63.01, 68, 73, 77.99, 82.99, 87.99],
+					"unit": "degC"
+				},
+				"heat_capacity": {
+					"magnitude": [3670.76, 3697.13, 3723.57, 3743.95, 3762.32, 3780.09, 3797.61, 3809.75, 3824.02, 3837.31, 3848.33, 3859.53, 3871.45, 3881.14, 3892.77, 3904.04, 3911.55],
+					"unit": "J kg**-1 K**-1"
+				},
+				"max_error": 0.01
+			}
+		}
+	},
+
+	"collector_model": {
+		"manufacturer_name": "Arcon-Sunmark A/S",
+		"product_name": "HTHEATstore 35/10",
+		"certificate_lab": "SP",
+		"certificate_date_issued": "2016-07-14",
+		"licence_number": "SP SC0843-14",
+		"test_report_id": "6P02267-C-Rev 1, 4P04266-C-Rev 2",
+		"performance_parameters_test_method": "Quasi dynamic",
+		"test_reference_area": "gross area",
+		"collector_type": "flat plate collector, double glazed with glass cover + foil.",
+		"absorber_type": "harp",
+		"gross_area": {
+			"description": "Gross collector area.",
+			"magnitude": 13.57,
+			"unit": "m**2"
+		},
+		"gross_length": {
+			"description": "Gross length of one collector (collector side parallel to ground).",
+			"magnitude": 5.973,
+			"unit": "m"
+		},
+		"gross_width": {
+			"description": "Gross width of one collector (normal to gross_length, i.e. measured perpendicular to the ground).",
+			"magnitude": 2.272,
+			"unit": "m"
+		},
+		"gross_height": {
+			"description": "Gross height ('thickness') of one collector (from cover to backside).",
+			"magnitude": 0.1145,
+			"unit": "m"
+		},
+		"eta0b": {
+			"description": "Peak collector efficiency (= zero loss coefficient) based on beam irradiance.",
+			"magnitude": 0.745,
+			"unit": "dimensionless"
+		},
+		"Kd": {
+			"description": "Incidence angle modifier for diffuse radiation.",
+			"magnitude": 0.93,
+			"unit": "dimensionless"
+		},
+		"eta0hem": {
+			"description": "Hemispherical peak collector efficiency, calculated based on 'eta0b' and 'Kd' using the formula: eta0hem = eta0b * (0.85 + 0.15 * Kd).",
+			"magnitude": 0.7371775,
+			"unit": "dimensionless"
+		},
+		"a1": {
+			"description": "Linear heat loss coefficient.",
+			"magnitude": 2.067,
+			"unit": "W m**-2 K**-1"
+		},
+		"a2": {
+			"description": "Quadratic heat loss coefficient.",
+			"magnitude": 0.009,
+			"unit": "W m**-2 K**-2"
+		},
+		"a3": {
+			"description": "Wind speed dependence of the heat loss coefficient.",
+			"magnitude": 0.000,
+			"unit": "J m**-3 K**-1"
+		},
+		"a4": {
+			"description": "Sky temperature dependence of the heat loss coefficient.",
+			"magnitude": 0.000,
+			"unit": "dimensionless"
+		},
+		"a5": {
+			"description": "Effective thermal heat capacity.",
+			"magnitude": 7.313,
+			"unit": "kJ K**-1 m**-2"
+		},
+		"a6": {
+			"description": "Wind speed dependence of the zero loss efficiency.",
+			"magnitude": 0.000,
+			"unit": "s m**-1"
+		},
+		"incidence_angle_modifier_angles": {
+			"description": "Incidence angles on collector plane to which the incidence angle modifier values refer.",
+			"magnitde": [10, 20, 30, 40, 50, 60, 70, 80, 90],
+			"unit": "deg"
+		},
+		"incidence_angle_modifier_values": {
+			"description": "Incidence angle modifier; same values for transversal and longitudinal directions.",
+			"magnitude": [1, 0.99, 0.97, 0.94, 0.9, 0.82, 0.65, 0.32, 0],
+			"unit": "dimensionless"
+		}
+	},
+
+	"data_channels": {
+		"vf": {
+			"description": "Total volume flow of collector array.",
+			"unit": "m**3 s**-1"
+		},
+		"vf__std": {
+			"description": "Standard deviation of `vf`.",
+			"unit": "m**3 s**-1"
+		},
+		"mf__calc": {
+			"description": "Total mass flow of collector array. Calculated data channel.",
+			"unit": "kg s**-1"
+		},
+		"mf__calc__std": {
+			"description": "Standard deviation of `mf__calc`.",
+			"unit": "kg s**-1"
+		},
+		"tp__calc": {
+			"description": "Total thermal power output of collector array. Calculated data channel.",
+			"unit": "W"
+		},
+		"tp__calc__std": {
+			"description": "Standard deviation of `tp__calc`.",
+			"unit": "W"
+		},
+		"te_in": {
+			"description": "Inlet temperature to the collector array.",
+			"unit": "K"
+		},
+		"te_in__std": {
+			"description": "Standard deviation of `te_in`.",
+			"unit": "K"
+		},
+		"te_out": {
+			"description": "Outlet temperature from the collector array.",
+			"unit": "K"
+		},
+		"te_out__std": {
+			"description": "Standard deviation of `te_out`.",
+			"unit": "K"
+		},
+		"te_out_row1": {
+			"description": "Outlet temperature from collector array row 1.",
+			"unit": "K"
+		},
+		"te_out_row1__std": {
+			"description": "Standard deviation of `te_out_row1`.",
+			"unit": "K"
+		},
+		"te_out_row2": {
+			"description": "Outlet temperature from collector array row 2.",
+			"unit": "K"
+		},
+		"te_out_row2__std": {
+			"description": "Standard deviation of `te_out_row2`.",
+			"unit": "K"
+		},
+		"te_out_row3": {
+			"description": "Outlet temperature from collector array row 3.",
+			"unit": "K"
+		},
+		"te_out_row3__std": {
+			"description": "Standard deviation of `te_out_row3`.",
+			"unit": "K"
+		},
+		"te_out_row4": {
+			"description": "Outlet temperature from collector array row 4.",
+			"unit": "K"
+		},
+		"te_out_row4__std": {
+			"description": "Standard deviation of `te_out_row4`.",
+			"unit": "K"
+		},
+		"rho_in__calc": {
+			"description": "Density of heat transfer fluid at collector array inlet. Calculated data channel.",
+			"unit": "kg m**-3"
+		},
+		"rho_in__calc__std": {
+			"description": "Standard deviation of `rho_in__calc`.",
+			"unit": "kg m**-3"
+		},
+		"rho_out__calc": {
+			"description": "Density of heat transfer fluid at collector array outlet. Calculated data channel.",
+			"unit": "kg m**-3"
+		},
+		"rho_out__calc__std": {
+			"description": "Standard deviation of `rho_out__calc`.",
+			"unit": "kg m**-3"
+		},
+		"cp_in__calc": {
+			"description": "Heat capacity of heat transfer fluid at collector array inlet. Calculated data channel.",
+			"unit": "J kg**-1 K**-1"
+		},
+		"cp_in__calc__std": {
+			"description": "Standard deviation of `cp_in__calc`.",
+			"unit": "J kg**-1 K**-1"
+		},
+		"cp_out__calc": {
+			"description": "Heat capacity of heat transfer fluid at collector array outlet. Calculated data channel.",
+			"unit": "J kg**-1 K**-1"
+		},
+		"cp_out__calc__std": {
+			"description": "Standard deviation of `cp_out__calc`.",
+			"unit": "J kg**-1 K**-1"
+		},
+		"rd_gti": {
+			"description": "Global irradiance in plane of collector array.",
+			"unit": "W m**-2"
+		},
+		"rd_gti__std": {
+			"description": "Standard deviation of `rd_gti`.",
+			"unit": "W m**-2"
+		},
+		"rd_ghi": {
+			"description": "Global horizontal irradiance.",
+			"unit": "W m**-2"
+		},
+		"rd_ghi__std": {
+			"description": "Standard deviation of `rd_ghi`.",
+			"unit": "W m**-2"
+		},
+		"rd_bti__calc": {
+			"description": "Beam / direct irradiance in plane of collector array. Potential beam shadowing on the collectors is not taken into account. Calculated data channel.",
+			"unit": "W m**-2"
+		},
+		"rd_bti__calc__std": {
+			"description": "Standard deviation of `rd_bti__calc`.",
+			"unit": "W m**-2"
+		},
+		"rd_bhi__calc": {
+			"description": "Beam / direct horizontal irradiance. Calculated data channel.",
+			"unit": "W m**-2"
+		},
+		"rd_bhi__calc__std": {
+			"description": "Standard deviation of `rd_bhi__calc`.",
+			"unit": "W m**-2"
+		},
+		"rd_dni": {
+			"description": "Direct normal irradiance.",
+			"unit": "W m**-2"
+		},
+		"rd_dni__std": {
+			"description": "Standard deviation of `rd_dni`.",
+			"unit": "W m**-2"
+		},
+		"rd_dti__calc": {
+			"description": "Diffuse irradiance in plane of collector array. Diffuse masking on the collectors (due to front collector rows) is not taken into account. Calculated data channel.",
+			"unit": "W m**-2"
+		},
+		"rd_dti__calc__std": {
+			"description": "Standard deviation of `rd_dti__calc`.",
+			"unit": "W m**-2"
+		},
+		"rd_dhi__calc": {
+			"description": "Diffuse horizontal irradiance. Calculated data channel.",
+			"unit": "W m**-2"
+		},
+		"rd_dhi__calc__std": {
+			"description": "Standard deviation of `rd_dhi__calc`.",
+			"unit": "W m**-2"
+		},
+		"te_amb": {
+			"description": "Ambient air temperature.",
+			"unit": "K"
+		},
+		"te_amb__std": {
+			"description": "Standard deviation of `te_amb`.",
+			"unit": "K"
+		},
+		"ve_wind": {
+			"description": "Horizontal wind speed / wind velocity at the top edge of the collectors.",
+			"unit": "m s**-1"
+		},
+		"ve_wind__std": {
+			"description": "Standard deviation of `ve_wind`.",
+			"unit": "m s**-1"
+		},
+		"rh_amb": {
+			"description": "Ambient relative humidity.",
+			"unit": "dimensionless"
+		},
+		"rh_amb__std": {
+			"description": "Standard deviation of `rh_amb`.",
+			"unit": "dimensionless"
+		},
+		"aoi__calc": {
+			"description": "Angle of incidence between the normal vector of the collector plane and the sun-beam vector. Calculated data channel.",
+			"unit": "deg"
+		},
+		"sun_azimuth__calc": {
+			"description": "Solar azimuth angle. Calculated data channel.",
+			"unit": "deg"
+		},
+		"sun_apparent_elevation__calc": {
+			"description": "Apparent solar elevation / altitude angle. Calculated data channel.",
+			"unit": "deg"
+		},
+		"is_shadowed__calc": {
+			"description": "Binary variable. True if the collector array, at a particular timestamp, is considered shadowed (either partly or completely) by any shadow type. Calculated data channel.",
+			"unit": "dimensionless"
+		},
+		"is_shadowed_external": {
+			"description": "Binary variable. True if the collector array, at a particular timestamp, is considered shadowed (either partly or completely) by external objects.",
+			"unit": "dimensionless"
+		},
+		"rd_bti_shadowed_share__calc": {
+			"description": "Float between 0 (not shaded) and 1 (completely shaded). Degree of beam shadowing caused by front collector rows due to row-to-row shadowing. Calculated data channel.",
+			"unit": "dimensionless"
+		},
+		"is_shadowed_internal__calc": {
+			"description": "Binary variable. True if the collector array, at a particular timestamp, is considered shadowed (either partly or completely) by internal / row-to-row shadowing. Calculated data channel.",
+			"unit": "dimensionless"
+		}
+	}
+}
