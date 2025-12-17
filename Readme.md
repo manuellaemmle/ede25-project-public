@@ -42,7 +42,7 @@ All projects share the same tasks and parts, as follows:
     - **Functional Code**: The code must run on the instructor’s computer without modification
     - **Documentation in Markdown**: See evaluation criteria for documentation requirements
     - Ideally a single file
-- **Source Files**
+- **Source Files** (only if you manually change them)
 - **HTML Version of the Notebook** (just in case)
 
 ## Project Presentation
